@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Chi tiết đơn hàng</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col items-center py-6">
+
+  <div class="w-full max-w-md px-4">
+    <h1 class="text-xl font-bold text-gray-800 mb-4 text-center">Chi tiết đơn hàng</h1>
+
+    <div class="bg-white rounded-xl shadow p-4">
+      <!-- Thông tin đơn -->
+      <div class="mb-4">
+        <p class="text-sm text-gray-600">Mã đơn hàng: <span class="font-medium">DH123456</span></p>
+        <p class="text-sm text-gray-600">Ngày đặt: 17/06/2025 • 14:30</p>
+        <p class="text-sm text-gray-600">Trạng thái: <span class="text-yellow-600 font-semibold">Đang giao</span></p>
+        <p class="text-sm text-gray-600">Hình thức thanh toán: Chuyển khoản</p>
+        <p class="text-sm text-gray-600">Địa chỉ giao hàng: <br><span class="font-medium">123 Đường ABC, Hà Nội</span></p>
+        <p class="text-sm text-gray-600">Mã giảm giá: <span class="text-green-600">GIAM10</span></p>
+      </div>
+
+      <!-- Danh sách sản phẩm -->
+      <div class="mb-4 border-t pt-3">
+        <p class="font-semibold mb-2 text-gray-800">Sản phẩm:</p>
+
+        <!-- Sản phẩm 1 -->
+        <div class="flex justify-between items-center mb-2">
+          <div>
+            <p class="text-sm font-medium">Sữa rửa mặt ABC</p>
+            <p class="text-xs text-gray-500">x2 • 120.000₫</p>
+          </div>
+          <p class="text-sm font-semibold text-gray-700">240.000₫</p>
+        </div>
+
+        <!-- Sản phẩm 2 -->
+        <div class="flex justify-between items-center mb-2">
+          <div>
+            <p class="text-sm font-medium">Kem dưỡng XYZ</p>
+            <p class="text-xs text-gray-500">x1 • 280.000₫</p>
+          </div>
+          <p class="text-sm font-semibold text-gray-700">280.000₫</p>
+        </div>
+      </div>
+
+      <!-- Tổng kết -->
+      <div class="border-t pt-3">
+        <div class="flex justify-between text-sm text-gray-700 mb-1">
+          <span>Tạm tính</span>
+          <span>520.000₫</span>
+        </div>
+        <div class="flex justify-between text-sm text-gray-700 mb-1">
+          <span>Phí vận chuyển</span>
+          <span>0₫</span>
+        </div>
+        <div class="flex justify-between font-semibold text-gray-900 text-base mt-2">
+          <span>Tổng cộng</span>
+          <span class="text-red-500">520.000₫</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

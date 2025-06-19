@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Đặt lịch tư vấn chi tiết</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col items-center py-8">
+
+    <div class="bg-white p-6 rounded-2xl shadow-lg w-full max-w-xl">
+        <h2 class="text-2xl font-semibold text-center text-gray-800 mb-6">Đặt lịch tư vấn</h2>
+
+        <!-- Giới thiệu về liệu trình -->
+        <div class="mb-6 p-4 bg-blue-50 rounded-lg">
+            <p class="font-semibold text-blue-600">Liệu trình: Chăm sóc da chuyên sâu</p>
+            <p class="text-sm text-gray-700 mt-2">
+                Thời gian liệu trình: <strong>5 buổi</strong><br>
+                Thời lượng mỗi buổi: <strong>60 phút</strong><br>
+            </p>
+        </div>
+
+        <!-- Chọn ngày -->
+        <div class="mb-4">
+            <label for="booking-date" class="block font-semibold mb-2 text-gray-700">Chọn ngày</label>
+            <input id="booking-date" type="date" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-blue-400">
+        </div>
+
+        <!-- Nhập giờ -->
+        <div class="mb-4">
+            <label for="booking-time" class="block font-semibold mb-2 text-gray-700">Nhập giờ (8h - 17h)</label>
+            <input id="booking-time" type="time" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-blue-400" min="08:00" max="17:00">
+        </div>
+
+        <!-- Chọn người tư vấn (chuyển thành hyperlink) -->
+        <div class="mb-4">
+           
+            <a href="chitiet-nguoituvan.html" class="block text-blue-500 underline text-base font-medium hover:text-blue-700">
+                Chọn chuyên gia tư vấn
+            </a>
+            <p class="text-sm text-gray-500 mt-1">Vui lòng chọn người tư vấn phù hợp từ danh sách.</p>
+        </div>
+
+        <!-- Ghi chú khách hàng -->
+        <div class="mb-4">
+            <label for="note" class="block font-semibold mb-2 text-gray-700">Ghi chú thêm</label>
+            <textarea id="note" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-blue-400" placeholder="Ví dụ: Tôi muốn tư vấn thêm về chăm sóc da sau sinh..."></textarea>
+        </div>
+
+        <!-- Trạng thái đặt lịch -->
+        <div class="mb-6">
+            <label class="block font-semibold mb-2 text-gray-700">Trạng thái đặt lịch</label>
+            <span class="px-3 py-1 bg-yellow-100 text-yellow-600 font-semibold rounded-full text-sm">Đang chờ xác nhận</span>
+        </div>
+
+        <!-- Nút tiếp tục -->
+        <button class="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 rounded-lg transition">Tiếp tục</button>
+    </div>
+
+</body>
+</html>

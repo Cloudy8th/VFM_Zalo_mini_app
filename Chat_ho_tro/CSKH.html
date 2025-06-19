@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chat CSKH</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex justify-center items-center min-h-screen">
+
+  <!-- Chat Container -->
+  <div class="w-full max-w-sm h-[90vh] bg-white rounded-2xl shadow-lg flex flex-col overflow-hidden">
+
+    <!-- Header -->
+    <div class="bg-indigo-600 text-white p-4 text-center text-lg font-semibold">
+      Hỗ trợ khách hàng
+    </div>
+
+    <!-- Ngày dưới header -->
+    <div class="text-center text-xs text-gray-500 py-1 border-b border-gray-200 bg-gray-50">
+      17/06/2025
+    </div>
+
+    <!-- Nội dung chat -->
+    <div class="flex-1 overflow-y-auto px-3 py-4 space-y-4 bg-gray-50">
+
+      <!-- Tin nhắn từ CSKH -->
+      <div class="flex items-start gap-2">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" class="w-8 h-8 rounded-full bg-white shadow">
+        <div class="bg-white rounded-xl p-3 shadow max-w-[75%]">
+          <p class="text-xs text-gray-500 font-medium">bot</p>
+          <p class="text-sm text-gray-800 mt-1">Xin chào, bạn cần hỗ trợ gì ạ?</p>
+          <p class="text-[10px] text-gray-400 text-right mt-1">seen at 10:03</p>
+        </div>
+      </div>
+
+      <!-- Tin nhắn người dùng -->
+      <div class="flex justify-end">
+        <div class="bg-indigo-100 text-indigo-900 p-3 rounded-xl shadow max-w-[75%] text-right">
+          <p class="text-xs text-gray-500 font-medium text-left">user_123</p>
+          <p class="text-sm mt-1">Mình muốn hỏi về lịch sử đơn hàng</p>
+          <p class="text-[10px] text-gray-400 text-right mt-1">unseen</p>
+        </div>
+      </div>
+
+      <!-- Tin nhắn tiếp theo -->
+      <div class="flex items-start gap-2">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" class="w-8 h-8 rounded-full bg-white shadow">
+        <div class="bg-white rounded-xl p-3 shadow max-w-[75%]">
+          <p class="text-xs text-gray-500 font-medium">bot</p>
+          <p class="text-sm text-gray-800 mt-1">Dạ bạn vui lòng chờ trong giây lát nhé.</p>
+          <p class="text-[10px] text-gray-400 text-right mt-1">seen at 10:05</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Input chat -->
+    <div class="bg-white border-t px-3 py-2 flex items-center gap-2">
+      <input type="text" placeholder="Nhập tin nhắn..." class="flex-1 text-sm px-4 py-2 border rounded-full focus:outline-none focus:ring focus:ring-indigo-400">
+      <button class="bg-indigo-500 text-white text-sm px-4 py-2 rounded-full hover:bg-indigo-600 transition">Send</button>
+    </div>
+
+  </div>
+</body>
+</html>

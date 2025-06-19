@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Chọn người tư vấn</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col items-center py-5">
+
+    <div class="bg-white w-full max-w-md rounded-2xl shadow-lg p-4">
+        <h2 class="text-xl font-semibold text-center text-gray-800 mb-5">Chọn người tư vấn</h2>
+
+        <!-- Ô tìm kiếm -->
+        <div class="mb-5">
+            <input type="text" placeholder="Tìm kiếm chuyên gia..." 
+                   class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-blue-400 focus:border-blue-400">
+        </div>
+
+        <!-- Danh sách người tư vấn -->
+        <form class="space-y-4">
+            <!-- Người tư vấn 1 -->
+            <label class="flex items-start p-3 border border-gray-300 rounded-xl bg-gray-50 cursor-pointer">
+                <input type="radio" name="consultant" class="w-5 h-5 mr-4 mt-2 accent-blue-500">
+                <img src="consultant1.jpg" alt="Người tư vấn" class="w-16 h-16 rounded-full mr-4 object-cover">
+                <div class="flex-1">
+                    <p class="text-lg font-semibold text-blue-700">Nguyễn Thị A</p>
+                    <p class="text-sm text-gray-600">Da liễu • 15 năm kinh nghiệm</p>
+                    <p class="text-xs text-gray-500 mt-1">Chăm sóc da chuyên sâu, tái tạo tế bào da, điều trị sắc tố.</p>
+                    <div class="flex items-center text-sm text-yellow-500 mt-2">
+                        ⭐ 4.8 (128 đánh giá)
+                    </div>
+                    <div class="mt-1">
+                        <span class="text-xs px-2 py-1 rounded-full bg-green-100 text-green-600 font-semibold">
+                            Đang hoạt động
+                        </span>
+                    </div>
+                </div>
+            </label>
+
+            <!-- Người tư vấn 2 -->
+            <label class="flex items-start p-3 border border-gray-300 rounded-xl bg-gray-50 cursor-pointer">
+                <input type="radio" name="consultant" class="w-5 h-5 mr-4 mt-2 accent-blue-500">
+                <img src="consultant2.jpg" alt="Người tư vấn" class="w-16 h-16 rounded-full mr-4 object-cover">
+                <div class="flex-1">
+                    <p class="text-lg font-semibold text-blue-700">Trần Văn B</p>
+                    <p class="text-sm text-gray-600">Giảm béo • 10 năm kinh nghiệm</p>
+                    <p class="text-xs text-gray-500 mt-1">Giảm béo công nghệ cao, dinh dưỡng, thể hình chuẩn.</p>
+                    <div class="flex items-center text-sm text-yellow-500 mt-2">
+                        ⭐ 4.6 (95 đánh giá)
+                    </div>
+                    <div class="mt-1">
+                        <span class="text-xs px-2 py-1 rounded-full bg-red-100 text-red-600 font-semibold">
+                            Tạm ngưng nhận lịch
+                        </span>
+                    </div>
+                </div>
+            </label>
+
+            <!-- Người tư vấn 3 -->
+            <label class="flex items-start p-3 border border-gray-300 rounded-xl bg-gray-50 cursor-pointer">
+                <input type="radio" name="consultant" class="w-5 h-5 mr-4 mt-2 accent-blue-500">
+                <img src="consultant3.jpg" alt="Người tư vấn" class="w-16 h-16 rounded-full mr-4 object-cover">
+                <div class="flex-1">
+                    <p class="text-lg font-semibold text-blue-700">Phạm Thị C</p>
+                    <p class="text-sm text-gray-600">Dinh dưỡng • 12 năm kinh nghiệm</p>
+                    <p class="text-xs text-gray-500 mt-1">Tư vấn dinh dưỡng tổng quát, chăm sóc sức khỏe hậu sản.</p>
+                    <div class="flex items-center text-sm text-yellow-500 mt-2">
+                        ⭐ 4.9 (220 đánh giá)
+                    </div>
+                    <div class="mt-1">
+                        <span class="text-xs px-2 py-1 rounded-full bg-green-100 text-green-600 font-semibold">
+                            Đang hoạt động
+                        </span>
+                    </div>
+                </div>
+            </label>
+
+            <!-- Người tư vấn 4 -->
+            <label class="flex items-start p-3 border border-gray-300 rounded-xl bg-gray-50 cursor-pointer">
+                <input type="radio" name="consultant" class="w-5 h-5 mr-4 mt-2 accent-blue-500">
+                <img src="consultant4.jpg" alt="Người tư vấn" class="w-16 h-16 rounded-full mr-4 object-cover">
+                <div class="flex-1">
+                    <p class="text-lg font-semibold text-blue-700">Lê Văn D</p>
+                    <p class="text-sm text-gray-600">Tâm lý trị liệu • 8 năm kinh nghiệm</p>
+                    <p class="text-xs text-gray-500 mt-1">Tư vấn tâm lý, cân bằng cảm xúc, trị liệu hành vi nhận thức.</p>
+                    <div class="flex items-center text-sm text-yellow-500 mt-2">
+                        ⭐ 4.7 (78 đánh giá)
+                    </div>
+                    <div class="mt-1">
+                        <span class="text-xs px-2 py-1 rounded-full bg-green-100 text-green-600 font-semibold">
+                            Đang hoạt động
+                        </span>
+                    </div>
+                </div>
+            </label>
+        </form>
+
+        <!-- Nút tiếp tục -->
+        <div class="mt-6">
+            <button class="w-full bg-blue-500 text-white py-3 rounded-lg font-semibold text-lg hover:bg-blue-600">
+                Tiếp tục
+            </button>
+        </div>
+    </div>
+
+</body>
+</html>

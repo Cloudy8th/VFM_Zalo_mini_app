@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lịch hẹn tư vấn - Tháng</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6">
+
+  <div class="max-w-7xl mx-auto bg-white rounded-lg shadow p-4">
+    <div class="flex justify-between items-center mb-4">
+      <h1 class="text-2xl font-bold">Lịch hẹn tư vấn - Tháng 6/2025</h1>
+      <div class="space-x-2">
+        <button class="bg-purple-500 text-white px-3 py-1 rounded">Tháng</button>
+        <button class="bg-gray-200 px-3 py-1 rounded">Tuần</button>
+        <button class="bg-gray-200 px-3 py-1 rounded">Ngày</button>
+      </div>
+    </div>
+
+    <!-- Header các thứ -->
+    <div class="grid grid-cols-7 text-center font-semibold text-purple-700 border-b pb-2">
+      <div>T2</div>
+      <div>T3</div>
+      <div>T4</div>
+      <div>T5</div>
+      <div>T6</div>
+      <div>T7</div>
+      <div>CN</div>
+    </div>
+
+    <!-- Lưới lịch: 5 hàng tuần * 7 cột -->
+    <div class="grid grid-cols-7 gap-1 text-sm mt-2">
+
+      <!-- Ô lịch: bạn lặp đủ 35 ô (5 tuần) -->
+      <!-- Tuần 1 -->
+      <div class="border h-32 p-1"><div class="font-bold text-gray-700">26</div></div>
+      <div class="border h-32 p-1"><div class="font-bold text-gray-700">27</div></div>
+      <div class="border h-32 p-1"><div class="font-bold text-gray-700">28</div></div>
+      <div class="border h-32 p-1"><div class="font-bold text-gray-700">29</div></div>
+      <div class="border h-32 p-1"><div class="font-bold text-gray-700">30</div></div>
+      <div class="border h-32 p-1"><div class="font-bold text-gray-700">31</div></div>
+      <div class="border h-32 p-1"><div class="font-bold text-gray-700">1</div>
+        <!-- Sự kiện -->
+        <div class="bg-green-100 text-green-700 px-2 py-1 mt-1 rounded">
+          <div class="font-medium">Tư vấn A</div>
+          <div class="text-xs">🕒 08:00</div>
+          <div class="text-xs">📌 Xác nhận</div>
+        </div>
+      </div>
+
+      <!-- Tuần 2 -->
+      <div class="border h-32 p-1"><div class="font-bold text-gray-700">2</div></div>
+      <div class="border h-32 p-1"><div class="font-bold text-gray-700">3</div></div>
+      <div class="border h-32 p-1"><div class="font-bold text-gray-700">4</div>
+        <div class="bg-yellow-100 text-yellow-800 px-2 py-1 mt-1 rounded">
+          <div class="font-medium">Tư vấn B</div>
+          <div class="text-xs">🕒 14:30</div>
+          <div class="text-xs">📌 Chờ xác nhận</div>
+        </div>
+      </div>
+      <div class="border h-32 p-1"><div class="font-bold text-gray-700">5</div></div>
+      <div class="border h-32 p-1"><div class="font-bold text-gray-700">6</div></div>
+      <div class="border h-32 p-1"><div class="font-bold text-gray-700">7</div></div>
+      <div class="border h-32 p-1"><div class="font-bold text-gray-700">8</div></div>
+
+      <!-- Tuần 3 -->
+      <div class="border h-32 p-1"><div class="font-bold text-gray-700">9</div>
+        <div class="bg-red-100 text-red-700 px-2 py-1 mt-1 rounded">
+          <div class="font-medium">Tư vấn C</div>
+          <div class="text-xs">🕒 10:00</div>
+          <div class="text-xs">📌 Đã hủy</div>
+        </div>
+      </div>
+      <div class="border h-32 p-1"><div class="font-bold text-gray-700">10</div></div>
+      <div class="border h-32 p-1"><div class="font-bold text-gray-700">11</div></div>
+      <div class="border h-32 p-1"><div class="font-bold text-gray-700">12</div></div>
+      <div class="border h-32 p-1"><div class="font-bold text-gray-700">13</div></div>
+      <div class="border h-32 p-1"><div class="font-bold text-gray-700">14</div></div>
+      <div class="border h-32 p-1"><div class="font-bold text-gray-700">15</div></div>
+
+      <!-- Tuần 4 và 5: thêm tương tự -->
+      <!-- ... -->
+
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng nhập bằng QR - Mini App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+    <div class="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md">
+
+        <!-- Logo -->
+        <div class="flex justify-center mb-6">
+            <img src="logo.png" alt="Mini App Logo" class="w-20 h-20">
+        </div>
+
+        <!-- Tiêu đề -->
+        <h2 id="titleText" class="text-2xl font-semibold text-center text-gray-800 mb-4">Đăng nhập qua mã QR</h2>
+
+        <!-- QR code -->
+        <div class="flex justify-center mb-4">
+            <img src="sample-qr.png" alt="QR Code" class="w-56 h-56 border border-gray-300 rounded-md">
+        </div>
+
+        <!-- Thời gian hết hạn -->
+        <div class="text-center text-sm text-gray-500 mb-4">
+            <span id="expireText">Hết hạn sau:</span> <span id="countdown" class="font-medium text-red-500">60</span> <span id="secondText">giây</span>
+        </div>
+
+        <!-- Nút làm mới -->
+        <button onclick="refreshQR()" id="refreshButton" class="w-full py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg mb-4 transition">
+            Làm mới mã QR
+        </button>
+
+        <!-- Hướng dẫn -->
+        <div class="text-sm text-gray-600 mb-4" id="guideSection">
+            <h4 id="guideTitle" class="font-semibold mb-1">Hướng dẫn quét QR:</h4>
+            <ul class="list-disc list-inside space-y-1">
+                <li id="step1">Mở ứng dụng Zalo</li>
+                <li id="step2">Chọn phần Quét mã QR</li>
+                <li id="step3">Đưa camera vào mã QR trên màn hình</li>
+            </ul>
+        </div>
+
+        <!-- Hyperlink đăng nhập bằng mật khẩu -->
+        <div class="text-center mb-4">
+            <a href="#" id="loginWithPassword" class="text-blue-500 hover:underline text-sm font-medium">Đăng nhập bằng mật khẩu</a>
+        </div>
+
+        <!-- Footer: Chọn ngôn ngữ -->
+        <div class="text-center text-sm text-gray-500 border-t pt-3">
+            <button onclick="setLanguage('vi')" class="mx-2 hover:underline">Tiếng Việt</button> |
+            <button onclick="setLanguage('en')" class="mx-2 hover:underline">English</button>
+        </div>
+
+    </div>
+
+    <script>
+        let countdown = 60;
+        const timer = setInterval(() => {
+            countdown--;
+            document.getElementById('countdown').innerText = countdown;
+            if (countdown <= 0) {
+                clearInterval(timer);
+                alert("Mã QR đã hết hạn, vui lòng làm mới.");
+            }
+        }, 1000);
+
+        function refreshQR() {
+            alert("Làm mới mã QR");
+            countdown = 60;
+        }
+
+        function setLanguage(lang) {
+            if (lang === "vi") {
+                document.getElementById("titleText").innerText = "Đăng nhập qua mã QR";
+                document.getElementById("expireText").innerText = "Hết hạn sau:";
+                document.getElementById("secondText").innerText = "giây";
+                document.getElementById("refreshButton").innerText = "Làm mới mã QR";
+                document.getElementById("guideTitle").innerText = "Hướng dẫn quét QR:";
+                document.getElementById("step1").innerText = "Mở ứng dụng Zalo";
+                document.getElementById("step2").innerText = "Chọn phần Quét mã QR";
+                document.getElementById("step3").innerText = "Đưa camera vào mã QR trên màn hình";
+                document.getElementById("loginWithPassword").innerText = "Đăng nhập bằng mật khẩu";
+            } else {
+                document.getElementById("titleText").innerText = "Login with QR Code";
+                document.getElementById("expireText").innerText = "Expires in:";
+                document.getElementById("secondText").innerText = "seconds";
+                document.getElementById("refreshButton").innerText = "Refresh QR Code";
+                document.getElementById("guideTitle").innerText = "QR Scan Guide:";
+                document.getElementById("step1").innerText = "Open Zalo app";
+                document.getElementById("step2").innerText = "Go to QR Scan section";
+                document.getElementById("step3").innerText = "Point camera at the QR code on screen";
+                document.getElementById("loginWithPassword").innerText = "Login with password";
+            }
+        }
+    </script>
+
+</body>
+</html>
